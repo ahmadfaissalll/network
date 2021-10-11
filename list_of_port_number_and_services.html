@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table,th,td {
+            border: 1px solid rgb(202, 202, 202);
+            padding: 10px;
+        }
+
+        thead > tr {
+            background-color: #ddd;
+        }
+
+
+        tbody > tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+
+        th:nth-child(1) {
+            width: 0;
+        }
+
+        th:nth-child(2) {
+            width: 100px;
+        }
+
+        td:nth-child(1),td:nth-child(2) {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+<table>
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Port</th>
+            <th>Service </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td> 7</td>
+            <td>ECHO </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td> 9</td>
+            <td>DISCARD </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td> 11</td>
+            <td>SYSTAT </td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td> 13</td>
+            <td>DAYTIME </td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td> 17</td>
+            <td>QOTD </td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td> 19</td>
+            <td>CHARGEN </td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td> 20</td>
+            <td>FTP-DATA </td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td> 21</td>
+            <td>FTP </td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td> 22</td>
+            <td>SSH </td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td> 23</td>
+            <td>TELNET </td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td> 25</td>
+            <td>SMTP </td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td> 37</td>
+            <td>TIME </td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td> 42</td>
+            <td>NAMESERVER </td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td> 43</td>
+            <td>NICNAME </td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td> 53</td>
+            <td>DOMAIN </td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td> 70</td>
+            <td>GOPHER </td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td> 79</td>
+            <td>FINGER </td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td> 80</td>
+            <td>HTTP </td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td> 81</td>
+            <td>HOSTS2-NS </td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td> 88</td>
+            <td>KERBEROS </td>
+        </tr>
+        <tr>
+            <td>21</td>
+            <td> 101</td>
+            <td>HOSTNAME </td>
+        </tr>
+        <tr>
+            <td>22</td>
+            <td> 102</td>
+            <td>ISO-TSAP </td>
+        </tr>
+        <tr>
+            <td>23</td>
+            <td> 107</td>
+            <td>RTELNET </td>
+        </tr>
+        <tr>
+            <td>24</td>
+            <td> 109</td>
+            <td>POP2 </td>
+        </tr>
+        <tr>
+            <td>25</td>
+            <td> 110</td>
+            <td>POP3 </td>
+        </tr>
+        <tr>
+            <td>26</td>
+            <td> 111</td>
+            <td>SUNRPC </td>
+        </tr>
+        <tr>
+            <td>27</td>
+            <td> 113</td>
+            <td>AUTH </td>
+        </tr>
+        <tr>
+            <td>28</td>
+            <td> 117</td>
+            <td>UUCP-PATH </td>
+        </tr>
+        <tr>
+            <td>29</td>
+            <td> 118</td>
+            <td>SQLSERV </td>
+        </tr>
+        <tr>
+            <td>30</td>
+            <td> 119</td>
+            <td>NNTP </td>
+        </tr>
+        <tr>
+            <td>31</td>
+            <td> 135</td>
+            <td>EPMAP </td>
+        </tr>
+        <tr>
+            <td>32</td>
+            <td> 137</td>
+            <td>NETBIOS-NS </td>
+        </tr>
+        <tr>
+            <td>33</td>
+            <td> 139</td>
+            <td>NETBIOS-SSN </td>
+        </tr>
+        <tr>
+            <td>34</td>
+            <td> 143</td>
+            <td>IMAP </td>
+        </tr>
+        <tr>
+            <td>35</td>
+            <td> 150</td>
+            <td>SQL-NET </td>
+        </tr>
+        <tr>
+            <td>36</td>
+            <td> 156</td>
+            <td>SQLSRV </td>
+        </tr>
+        <tr>
+            <td>37</td>
+            <td> 158</td>
+            <td>PCMAIL-SRV </td>
+        </tr>
+        <tr>
+            <td>38</td>
+            <td> 170</td>
+            <td>PRINT-SRV </td>
+        </tr>
+        <tr>
+            <td>39</td>
+            <td> 179</td>
+            <td>BGP </td>
+        </tr>
+        <tr>
+            <td>40</td>
+            <td> 194</td>
+            <td>IRC </td>
+        </tr>
+        <tr>
+            <td>41</td>
+            <td> 322</td>
+            <td>RTSPS </td>
+        </tr>
+        <tr>
+            <td>42</td>
+            <td> 349</td>
+            <td>MFTP </td>
+        </tr>
+        <tr>
+            <td>43</td>
+            <td> 389</td>
+            <td>LDAP </td>
+        </tr>
+        <tr>
+            <td>44</td>
+            <td> 443</td>
+            <td>HTTPS </td>
+        </tr>
+        <tr>
+            <td>45</td>
+            <td> 445</td>
+            <td>MICROSOFT-DS </td>
+        </tr>
+        <tr>
+            <td>46</td>
+            <td> 464</td>
+            <td>KPASSWD </td>
+        </tr>
+        <tr>
+            <td>47</td>
+            <td> 507</td>
+            <td>CRS </td>
+        </tr>
+        <tr>
+            <td>48</td>
+            <td> 512</td>
+            <td>EXEC </td>
+        </tr>
+        <tr>
+            <td>49</td>
+            <td> 513</td>
+            <td>LOGIN </td>
+        </tr>
+        <tr>
+            <td>50</td>
+            <td>51</td>
+            <td>CMD </td>
+        </tr>
+        <tr>
+            <td> 51</td>
+            <td> 515</td>
+            <td>PRINTER </td>
+        </tr>
+        <tr>
+            <td>52</td>
+            <td> 520</td>
+            <td>EFS </td>
+        </tr>
+        <tr>
+            <td>53</td>
+            <td> 522</td>
+            <td>ULP </td>
+        </tr>
+        <tr>
+            <td>54</td>
+            <td> 526</td>
+            <td>TEMPO </td>
+        </tr>
+        <tr>
+            <td>55</td>
+            <td> 529</td>
+            <td>IRC-SERV </td>
+        </tr>
+        <tr>
+            <td>56</td>
+            <td> 530</td>
+            <td>COURIER </td>
+        </tr>
+        <tr>
+            <td>57</td>
+            <td> 531</td>
+            <td>CONFERENCE </td>
+        </tr>
+        <tr>
+            <td>58</td>
+            <td> 532</td>
+            <td>NETNEWS </td>
+        </tr>
+        <tr>
+            <td>59</td>
+            <td> 540</td>
+            <td>UUCP </td>
+        </tr>
+        <tr>
+            <td>60</td>
+            <td> 543</td>
+            <td>KLOGIN </td>
+        </tr>
+        <tr>
+            <td>61</td>
+            <td> 544</td>
+            <td>KSHELL </td>
+        </tr>
+        <tr>
+            <td>62</td>
+            <td> 546</td>
+            <td>DHCPV6-CLIENT </td>
+        </tr>
+        <tr>
+            <td>63</td>
+            <td> 547</td>
+            <td>DHCPV6-SERVER </td>
+        </tr>
+        <tr>
+            <td>64</td>
+            <td> 548</td>
+            <td>AFPOVERTCP </td>
+        </tr>
+        <tr>
+            <td>65</td>
+            <td> 554</td>
+            <td>RTSP </td>
+        </tr>
+        <tr>
+            <td>66</td>
+            <td> 556</td>
+            <td>REMOTEFS </td>
+        </tr>
+        <tr>
+            <td>67</td>
+            <td> 563</td>
+            <td>NNTPS </td>
+        </tr>
+        <tr>
+            <td>68</td>
+            <td> 565</td>
+            <td>WHOAMI </td>
+        </tr>
+        <tr>
+            <td>69</td>
+            <td> 568</td>
+            <td>MS-SHUTTLE </td>
+        </tr>
+        <tr>
+            <td>70</td>
+            <td> 569</td>
+            <td>MS-ROME </td>
+        </tr>
+        <tr>
+            <td>71</td>
+            <td> 593</td>
+            <td>HTTP-RPC-EPMAP</td>
+        </tr>
+        <tr>
+            <td>72</td>
+            <td> 612</td>
+            <td>HMMP-IND </td>
+        </tr>
+        <tr>
+            <td>73</td>
+            <td> 613</td>
+            <td>HMMP-OP </td>
+        </tr>
+        <tr>
+            <td>74</td>
+            <td> 636</td>
+            <td>LDAPS </td>
+        </tr>
+        <tr>
+            <td>75</td>
+            <td> 666</td>
+            <td>DOOM </td>
+        </tr>
+        <tr>
+            <td>76</td>
+            <td> 691</td>
+            <td>MSEXCH-ROUTING</td>
+        </tr>
+        <tr>
+            <td>77</td>
+            <td> 749</td>
+            <td>KERBEROS-ADM </td>
+        </tr>
+        <tr>
+            <td>78</td>
+            <td> 800</td>
+            <td>MDBS_DAEMON </td>
+        </tr>
+        <tr>
+            <td>79</td>
+            <td> 989</td>
+            <td>FTPS-DATA </td>
+        </tr>
+        <tr>
+            <td>80</td>
+            <td> 990</td>
+            <td>FTPS </td>
+        </tr>
+        <tr>
+            <td>81</td>
+            <td> 992</td>
+            <td>TELNETS </td>
+        </tr>
+        <tr>
+            <td>82</td>
+            <td> 993</td>
+            <td>IMAPS </td>
+        </tr>
+        <tr>
+            <td>83</td>
+            <td> 994</td>
+            <td>IRCS </td>
+        </tr>
+        <tr>
+            <td>84</td>
+            <td> 995</td>
+            <td>POP3S </td>
+        </tr>
+        <tr>
+            <td>85</td>
+            <td> 1034</td>
+            <td>ACTIVESYNC </td>
+        </tr>
+        <tr>
+            <td>86</td>
+            <td> 1109</td>
+            <td>KPOP </td>
+        </tr>
+        <tr>
+            <td>87</td>
+            <td> 1110</td>
+            <td>NFSD-STATUS </td>
+        </tr>
+        <tr>
+            <td>88</td>
+            <td> 1155</td>
+            <td>NFA </td>
+        </tr>
+        <tr>
+            <td>89</td>
+            <td> 1270</td>
+            <td>OPSMGR </td>
+        </tr>
+        <tr>
+            <td>90</td>
+            <td> 1433</td>
+            <td>MS-SQL-S </td>
+        </tr>
+        <tr>
+            <td>91</td>
+            <td> 1434</td>
+            <td>MS-SQL-M </td>
+        </tr>
+        <tr>
+            <td>92</td>
+            <td> 1477</td>
+            <td>MS-SNA-SERVER </td>
+        </tr>
+        <tr>
+            <td>93</td>
+            <td> 1478</td>
+            <td>MS-SNA-BASE </td>
+        </tr>
+        <tr>
+            <td>94</td>
+            <td> 1512</td>
+            <td>WINS </td>
+        </tr>
+        <tr>
+            <td>95</td>
+            <td> 1524</td>
+            <td>INGRESLOCK </td>
+        </tr>
+        <tr>
+            <td>96</td>
+            <td> 1607</td>
+            <td>STT </td>
+        </tr>
+        <tr>
+            <td>97</td>
+            <td> 1711</td>
+            <td>PPTCONFERENCE </td>
+        </tr>
+        <tr>
+            <td>98</td>
+            <td> 1723</td>
+            <td>PPTP </td>
+        </tr>
+        <tr>
+            <td>99</td>
+            <td> 1731</td>
+            <td>MSICCP </td>
+        </tr>
+        <tr>
+            <td>100</td>
+            <td> 1745</td>
+            <td>REMOTE-WINSOCK</td>
+        </tr>
+        <tr>
+            <td>101</td>
+            <td> 1755</td>
+            <td>MS-STREAMING </td>
+        </tr>
+        <tr>
+            <td>102</td>
+            <td> 1801</td>
+            <td>MSMQ </td>
+        </tr>
+        <tr>
+            <td>103</td>
+            <td> 1863</td>
+            <td>MSNP </td>
+        </tr>
+        <tr>
+            <td>104</td>
+            <td> 1900</td>
+            <td>SSDP </td>
+        </tr>
+        <tr>
+            <td>105</td>
+            <td> 1944</td>
+            <td>CLOSE-COMBAT </td>
+        </tr>
+        <tr>
+            <td>106</td>
+            <td> 2053</td>
+            <td>KNETD </td>
+        </tr>
+        <tr>
+            <td>107</td>
+            <td> 2106</td>
+            <td>MZAP </td>
+        </tr>
+        <tr>
+            <td>108</td>
+            <td> 2177</td>
+            <td>QWAVE </td>
+        </tr>
+        <tr>
+            <td>109</td>
+            <td> 2234</td>
+            <td>DIRECTPLAY </td>
+        </tr>
+        <tr>
+            <td>110</td>
+            <td> 2382</td>
+            <td>MS-OLAP3 </td>
+        </tr>
+        <tr>
+            <td>111</td>
+            <td> 2383</td>
+            <td>MS-OLAP4 </td>
+        </tr>
+        <tr>
+            <td>112</td>
+            <td> 2393</td>
+            <td>MS-OLAP1 </td>
+        </tr>
+        <tr>
+            <td>113</td>
+            <td> 2394</td>
+            <td>MS-OLAP2 </td>
+        </tr>
+        <tr>
+            <td>114</td>
+            <td> 2460</td>
+            <td>MS-THEATER </td>
+        </tr>
+        <tr>
+            <td>115</td>
+            <td> 2504</td>
+            <td>WLBS </td>
+        </tr>
+        <tr>
+            <td>116</td>
+            <td> 2525</td>
+            <td>MS-V-WORLDS </td>
+        </tr>
+        <tr>
+            <td>117</td>
+            <td> 2701</td>
+            <td>SMS-RCINFO </td>
+        </tr>
+        <tr>
+            <td>118</td>
+            <td> 2702</td>
+            <td>SMS-XFER </td>
+        </tr>
+        <tr>
+            <td>119</td>
+            <td> 2703</td>
+            <td>SMS-CHAT </td>
+        </tr>
+        <tr>
+            <td>120</td>
+            <td> 2704</td>
+            <td>SMS-REMCTRL </td>
+        </tr>
+        <tr>
+            <td>121</td>
+            <td> 2725</td>
+            <td>MSOLAP-PTP2 </td>
+        </tr>
+        <tr>
+            <td>122</td>
+            <td> 2869</td>
+            <td>ICSLAP </td>
+        </tr>
+        <tr>
+            <td>123</td>
+            <td> 3020</td>
+            <td>CIFS </td>
+        </tr>
+        <tr>
+            <td>124</td>
+            <td> 3074</td>
+            <td>XBOX </td>
+        </tr>
+        <tr>
+            <td>125</td>
+            <td>126</td>
+            <td>MS-DOTNETSTER </td>
+        </tr>
+        <tr>
+            <td> 126</td>
+            <td> 3132</td>
+            <td>MS-RULE-ENGINE</td>
+        </tr>
+        <tr>
+            <td>127</td>
+            <td> 3268</td>
+            <td>MSFT-GC </td>
+        </tr>
+        <tr>
+            <td>128</td>
+            <td> 3269</td>
+            <td>MSFT-GC-SSL </td>
+        </tr>
+        <tr>
+            <td>129</td>
+            <td> 3343</td>
+            <td>MS-CLUSTER-NET</td>
+        </tr>
+        <tr>
+            <td>130</td>
+            <td> 3389</td>
+            <td>MS-WBT-SERVER </td>
+        </tr>
+        <tr>
+            <td>131</td>
+            <td> 3535</td>
+            <td>MS-LA </td>
+        </tr>
+        <tr>
+            <td>132</td>
+            <td> 3540</td>
+            <td>PNRP-PORT </td>
+        </tr>
+        <tr>
+            <td>133</td>
+            <td> 3544</td>
+            <td>TEREDO </td>
+        </tr>
+        <tr>
+            <td>134</td>
+            <td> 3587</td>
+            <td>P2PGROUP </td>
+        </tr>
+        <tr>
+            <td>135</td>
+            <td> 3702</td>
+            <td>WS-DISCOVERY </td>
+        </tr>
+        <tr>
+            <td>136</td>
+            <td> 3776</td>
+            <td>DVCPROV-PORT </td>
+        </tr>
+        <tr>
+            <td>137</td>
+            <td> 3847</td>
+            <td>MSFW-CONTROL </td>
+        </tr>
+        <tr>
+            <td>138</td>
+            <td> 3882</td>
+            <td>MSDTS1 </td>
+        </tr>
+        <tr>
+            <td>139</td>
+            <td> 3935</td>
+            <td>SDP-PORTMAPPER</td>
+        </tr>
+        <tr>
+            <td>140</td>
+            <td> 4350</td>
+            <td>NET-DEVICE </td>
+        </tr>
+        <tr>
+            <td>141</td>
+            <td> 4500</td>
+            <td>IPSEC-MSFT </td>
+        </tr>
+        <tr>
+            <td>142</td>
+            <td> 5355</td>
+            <td>LLMNR </td>
+        </tr>
+        <tr>
+            <td>143</td>
+            <td> 5357</td>
+            <td>WSD </td>
+        </tr>
+        <tr>
+            <td>144</td>
+            <td> 5357</td>
+            <td>WSD </td>
+        </tr>
+        <tr>
+            <td>145</td>
+            <td> 5678</td>
+            <td>RRAC </td>
+        </tr>
+        <tr>
+            <td>146</td>
+            <td> 5679</td>
+            <td>DCCM </td>
+        </tr>
+        <tr>
+            <td>147</td>
+            <td> 5720</td>
+            <td>MS-LICENSING </td>
+        </tr>
+        <tr>
+            <td>148</td>
+            <td> 6073</td>
+            <td>DIRECTPLAY8 </td>
+        </tr>
+        <tr>
+            <td>149</td>
+            <td> 9535</td>
+            <td>MAN </td>
+        </tr>
+        <tr>
+            <td>150</td>
+            <td> 9753</td>
+            <td>RASADV </td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
